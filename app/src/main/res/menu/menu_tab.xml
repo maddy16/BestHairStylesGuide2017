@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.logixity.apps.ringtonesmanager.TabActivity">
+
+    <item
+        android:id="@+id/action_rate"
+        android:orderInCategory="100"
+        android:title="Rate"
+        android:icon="@drawable/rate_icon_vec"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_plus"
+        android:title="Google Plus"
+        app:showAsAction="always"
+        app:actionLayout="@layout/plus_layout"/>
+
+</menu>

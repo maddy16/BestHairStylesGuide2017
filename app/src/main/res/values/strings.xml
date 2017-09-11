@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Best HairStyles Guide 2017</string>
+    <!--<string name="banner_ad_unit_id">ca-app-pub-1474727696191193/6428648660</string>-->
+    <!--Test Ad-->
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+    <!--<string name="native_ad_unit_id">ca-app-pub-1474727696191193/3028158991</string>-->
+
+    <!--Test Ad Native-->
+    <string name="native_ad_unit_id">ca-app-pub-3940256099942544/2793859312</string>
+
+
+    <string name="interstitial_ad_id">ca-app-pub-1474727696191193/7905381861</string>
+</resources>

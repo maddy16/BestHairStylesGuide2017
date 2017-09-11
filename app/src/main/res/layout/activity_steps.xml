@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:layout_height="match_parent"
+    tools:context="com.sizzling.apps.hairstyleguide.StepsActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_weight="65"
+        android:layout_height="0dp">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/stepsPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:onClick="swipeLeft"
+                app:srcCompat="@drawable/ic_swipe_left"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="swipeRight"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@drawable/ic_swipe_right"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+    <com.google.android.gms.ads.NativeExpressAdView
+        android:id="@+id/nativeAdView"
+        android:layout_weight="25"
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        ads:adSize="360x132"
+        ads:adUnitId="@string/native_ad_unit_id"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="10"
+        android:weightSum="1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:layout_height="0dp">
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:text="Share Now"
+            android:layout_margin="1dp"
+            android:onClick="shareImg"
+            android:textColor="#FFFFFF"
+            android:background="@color/colorPrimary"
+            android:layout_height="match_parent" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:text="Download Image"
+            android:layout_margin="1dp"
+            android:onClick="downloadImgClicked"
+            android:textColor="#FFFFFF"
+            android:background="@color/colorPrimary"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
