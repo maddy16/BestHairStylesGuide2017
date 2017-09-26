@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     static HashMap<Integer, ArrayList<Integer>> dataMap;
     static InterstitialAd mInterstitialAd;
-
+    static ArrayList<String> styleNames;
     static ArrayList<Integer> allStyles;
     static boolean testingMode = true;
     RecyclerView recyclerView;
@@ -154,8 +154,52 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
 
     }
+    void prepareNames(){
+        styleNames = new ArrayList<>();
+        styleNames.add("sexy swept side braid");
+        styleNames.add("milkmaid braids");
+        styleNames.add("twisted fishtail");
+        styleNames.add("twisted hairband");
+        styleNames.add("frend braid tie back");
+        styleNames.add("half up hair bun");
+        styleNames.add("half up twisted bun");
+        styleNames.add("vintage half up");
+        styleNames.add("60s ponytail");
+        styleNames.add("top bun");
+        styleNames.add("bouffant");
+        styleNames.add("bun and hairbow");
+        styleNames.add("fishtail braid");
+        styleNames.add("glam up");
+        styleNames.add("bow tiful style");
+        styleNames.add("sexy side chingon");
+        styleNames.add("sultry mermaid waves");
+        styleNames.add("perfect party hair");
+        styleNames.add("sleeky sexy ponytail");
+        styleNames.add("easy everyday curls");
+        styleNames.add("braided hair");
+        styleNames.add("half up half down");
+        styleNames.add("half up twisted tail");
+        styleNames.add("twist back");
+        styleNames.add("tie up braids");
+        styleNames.add("half bun half braid");
+        styleNames.add("twisted crown");
+        styleNames.add("three headband");
+        styleNames.add("fishtail braided headband");
+        styleNames.add("french braid bun");
+        styleNames.add("feminine french twist");
+        styleNames.add("bow braid hairstyle");
+        styleNames.add("four strand braid");
+        styleNames.add("braided ponytail");
+        styleNames.add("headband updo");
+        styleNames.add("dutch side braid");
+        styleNames.add("longer fuller ponytail");
+        styleNames.add("valentine's messy braid");
+        styleNames.add("vintage");
+        styleNames.add("halfup hair knot");
 
+    }
     void prepareData() {
+        prepareNames();
         dataMap = new HashMap<>();
         allStyles = new ArrayList<>();
         HashMap<Integer, ArrayList<Integer>> nums = new HashMap<>();

@@ -38,8 +38,19 @@ public class StepsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_steps);
         ActionBar actionBar = getSupportActionBar();
-        if(actionBar!=null)
+        int stylenum = getIntent().getIntExtra("stylenum", 0);
+        if(stylenum==0){
+            Toast.makeText(this, "Unable to Show Style", Toast.LENGTH_LONG).show();
+            finish();
+            return;
+        }
+        if(actionBar!=null){
             actionBar.setDisplayHomeAsUpEnabled(true);
+            String styleName = MainActivity.styleNames.get(stylenum-1);
+
+            actionBar.setTitle((styleName.charAt(0)+"").toUpperCase()+styleName.substring(1));
+        }
+
 
         AdRequest request = null;
         if (MainActivity.testingMode)
@@ -56,12 +67,8 @@ public class StepsActivity extends AppCompatActivity {
 //                    App.instance.countIntAd--;
         }
         slider = (ViewPager) findViewById(R.id.stepsPager);
-        int stylenum = getIntent().getIntExtra("stylenum", 0);
-        if(stylenum==0){
-            Toast.makeText(this, "Unable to Show Style", Toast.LENGTH_LONG).show();
-            finish();
-            return;
-        }
+
+
         data = MainActivity.dataMap.get(stylenum);
         StepsAdapter adapter = new StepsAdapter(this, data);
         slider.setAdapter(adapter);

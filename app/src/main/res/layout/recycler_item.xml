@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:background="#FFFFFF"
     android:layout_width="match_parent"
     android:padding="1dp"
+    android:weightSum="100"
     android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/list_item_img"
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
         android:layout_width="match_parent" />
-    <TextView
-        android:id="@+id/item_name_txt"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Hair Style Name"
-        android:background="#77000000"
-        android:padding="10dp"
-        />
-</LinearLayout>
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/item_name_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Hair Style Name"
+            android:background="#BB9c27b0"
+            android:padding="10dp"
+            />
+    </RelativeLayout>
+
+</FrameLayout>

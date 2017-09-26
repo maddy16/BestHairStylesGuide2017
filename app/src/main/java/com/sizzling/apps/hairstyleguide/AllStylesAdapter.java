@@ -36,7 +36,9 @@ public AllStylesAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i
 
 @Override
 public void onBindViewHolder(AllStylesAdapter.ViewHolder viewHolder, final int i){
-    RequestOptions glideOptions = new RequestOptions().fitCenter().override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL);
+    String styleName = MainActivity.styleNames.get(i);
+    viewHolder.name.setText((styleName.charAt(0)+"").toUpperCase()+styleName.substring(1));
+    RequestOptions glideOptions = new RequestOptions().fitCenter().override(500, 500);
     Glide.with(context)
             .load(galleryList.get(i)).apply(glideOptions)
             .into(viewHolder.img);
